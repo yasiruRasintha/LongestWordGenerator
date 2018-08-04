@@ -1,0 +1,43 @@
+<HTML>
+    <!--Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. 
+        If there are two or more words that are the same length, return the first word from the string with that length. 
+        Ignore punctuation and assume sen will not be empty.  -->
+        <head>
+            <title>"Coderbyte Challenges"</title>
+            <style></style>
+        </head>
+        <body>
+            <input id="textbox" type="text" value="0">
+            <button>"Pls Click Me!!"</button>
+            <script>	           
+                document.getElementById("textbox").addEventListener("input",longestWord("peepsdf dafd dssd"));
+                function longestWord(sen) {  
+                    alert("just entered!");
+                    var longest = 0;
+                    var check2 = 0;
+                    var word = sen.split(" ");
+                    var check = "";
+                    for(var i = 0;i < word.length; i++){
+                        check = word[i];
+                        check2 = word[i+1];
+                        if(i == 0){
+                            if(check2.length>check.length){
+                            longest = check2;
+                            alert(longest);
+                           }else{
+                                longest = check;
+                            }
+                        }else{
+                           if(check2.length>longest.length){
+                            longest = check2;
+                            alert("Even Longer:" + "  " + longest);
+                            }
+                        }
+                    }
+                    sen = longest;
+                    alert("This is the Longest Word in the sentence: " + "  " + sen); 
+                      }
+            </script>
+        </body>
+        </HTML>
+    
